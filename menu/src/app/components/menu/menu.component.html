@@ -1,0 +1,54 @@
+<!-- <div class="menu">
+
+  <div class="menu-item" *ngFor="let item of selectedRestaurant?.categoriesWithItems">
+    <h3>Category: {{item.name}}</h3>
+
+
+    <mat-card class="menu-item" *ngFor="let product of item.items">
+      <mat-card-header>
+        <mat-card-title class="menu-item-name">{{ product.name }}</mat-card-title>
+        <mat-card-subtitle class="menu-item-price">{{ product.price }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p class="menu-item-description">{{ product.description }}</p>
+      </mat-card-content>
+
+
+
+
+  </mat-card>
+</div>
+</div> -->
+
+
+<mat-accordion>
+  <mat-expansion-panel *ngFor="let item of selectedRestaurant?.categoriesWithItems">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{ item.name }}
+      </mat-panel-title>
+      <mat-panel-description>
+        <!-- {{ item.description }} -->
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <!-- <div *ngIf="item.items.length > 0"> -->
+      <mat-card *ngFor="let card of item.items">
+        <mat-card-header>
+          <mat-card-title>{{ card.name }}</mat-card-title>
+          <mat-card-subtitle>{{ card.price }}</mat-card-subtitle>
+        </mat-card-header>
+        <!-- <img mat-card-image [src]="card.image"> -->
+        <mat-card-content>
+          {{ card.description }}
+        </mat-card-content>
+        <mat-card-actions>
+          <!-- <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button> -->
+        </mat-card-actions>
+      </mat-card>
+    <!-- </div> -->
+    <div *ngIf="item.items.length === 0">
+      <p>No cards available.</p>
+    </div>
+  </mat-expansion-panel>
+</mat-accordion>

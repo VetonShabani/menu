@@ -1,0 +1,9 @@
+<nav class="nav-menu">
+  <ul *ngFor="let item of menu">
+    <li><a [routerLink]="['/menu']" routerLinkActive="router-link-active"  (click)="updateData(item.name)">{{item.name}}</a></li>
+
+    <!-- <li><a (click)="updateData('fratelli')">Fratelli</a></li>
+    <li><a routerLink="contact">Contact</a></li> -->
+  </ul>
+  <ul> <li><a routerLink="contact">Contact</a></li></ul>
+</nav>

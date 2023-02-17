@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #006D73;
+}
+.mat-expansion-panel-body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.mat-expansion-panel{
+  border-radius: 10px !important;
+  margin-bottom: 10px !important;
+}
+// Ocean Blue (#0077BE)
+// Sunshine Yellow (#FDB813)
+// Pale Peach (#FFE5B4)
